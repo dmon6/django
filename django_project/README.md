@@ -18,6 +18,7 @@ pipenv --python 3.7
 pipenv install django
 pipenv run python -m django --version #version was 2.1.7 in time of the video
 ```
+The 'pipenv install django' command will create a Pipfile as well as a Pipfile.lock. **DO NOT DELETE**
 
 ## Create a new project
 
@@ -164,3 +165,13 @@ urlpatterns = [
 ```
 
 Again this file is very similar to the django_project/urls.py file
+
+---
+
+# Templates
+
+By default django looks for a 'templates' sub folder in an app folder to handle html stuff. Create a templates folder in the blog directory
+
+```sh
+mkdir blog/templates
+```
