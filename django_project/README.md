@@ -2,6 +2,8 @@
 
 Following the Corey Schafer tutorial on youtube
 
+
+
 [Django tutorial video 1][d6f4fb88]
 
   [d6f4fb88]: https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p "Django tutorial video 1"
@@ -174,4 +176,16 @@ By default django looks for a 'templates' sub folder in an app folder to handle 
 
 ```sh
 mkdir blog/templates
+```
+
+create database tables to send and receive data 
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+
+create admin for localhost:8000/admin
+```sh
+python manage.py createsuperuser
+
 ```
