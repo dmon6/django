@@ -121,3 +121,46 @@ tree .
   └── manage.py
 
 ```
+At this point, the app doesn't do much we'll need to do some modifications to the existing files to make it work.
+
+We need to be able to point to the 'blog' app that we just created, add this to the django_project/urls.py file
+
+```py
+from django.urls import path, include #this
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls')), #this
+]
+
+```
+We're importing  'include' because it's being used in the 'path('blog')...' line,  it chops off whatever part of the URL matched up to that point and sends the remaining string to the included URL conf for further processing.
+
+Now we need to make /blog do stuff. Lets modify the blog/views.py file with the following
+
+```py
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def home(request):
+    return HttpResponse('<h1>Blog Home</h1>')
+
+def about(request):
+    return HttpResponse('<h1>Blog About</h1>')
+```
+
+The app still can't do anything because there's no actual url for blog yet. So create a new file named urls.py in the blog directory.
+Include the following.
+
+```py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='blog-home'),
+    path('about/', views.about, name='blog-about'),
+]
+```
+
+Again this file is very similar to the django_project/urls.py file
