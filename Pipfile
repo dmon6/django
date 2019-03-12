@@ -7,6 +7,14 @@ verify_ssl = true
 
 [packages]
 django = "*"
+certifi = "*"
+chardet = "*"
+django-crispy-forms = "*"
+idna = "*"
+pillow = "*"
+pytz = "*"
+requests = "*"
+urllib3 = "*"
 
 [requires]
 python_version = "3.7"
