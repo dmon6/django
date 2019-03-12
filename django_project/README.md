@@ -18,7 +18,7 @@ pipenv --python 3.7
 pipenv install django
 pipenv run python -m django --version #version was 2.1.7 in time of the video
 ```
-The 'pipenv install django' command will create a Pipfile as well as a Pipfile.lock. **DO NOT DELETE**
+The 'pipenv install django' command will create a Pipfile as well as a Pipfile.lock. ==**DO NOT DELETE**==
 
 ## Create a new project
 
