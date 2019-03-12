@@ -92,7 +92,7 @@ Video 2 of Corey Schafer guide on youtube:
 
 ## Create a blog app for the website
 
-Use django's built-in tools to start up structure for an app
+Use django's built-in tools to create an app folder using their template/structures.
 
 ```sh
 #python manage.py startapp <app name>
