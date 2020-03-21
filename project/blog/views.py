@@ -9,7 +9,6 @@ from django.views.generic import (ListView,
                                   DeleteView
                                   )
 
-
 def home(request):
     context = {
         'posts': Post.objects.all()
@@ -75,3 +74,6 @@ def about(request):
 
 def unitest(request):
     return render(request, 'blog/unittest.html', {'title': 'Unit Test'})
+
+def recipe(request):
+    return render(request, 'blog/recipe.html', {'title': 'Recipe'})
